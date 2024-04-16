@@ -1,3 +1,16 @@
+use std::{env, fs::OpenOptions, io::Read, path::Path};
+
+mod token;
+
 fn main() {
-    println!("Hello, World");
+    // TODO properly implement argument parsing
+    let args: Vec<String> = env::args().collect();
+    let file_path = Path::new(args[1].as_str());
+    let mut file = OpenOptions::new().read(true).open(file_path).unwrap();
+    let mut file_content = String::new();
+    file.read_to_string(&mut file_content).unwrap();
+
+    // TODO tokenize file_content
+    println!("{}", file_content);
+    // TODO create abstract syntax tree
 }
