@@ -10,7 +10,8 @@ fn main() {
     let mut file_content = String::new();
     file.read_to_string(&mut file_content).unwrap();
 
-    // TODO tokenize file_content
-    println!("{}", file_content);
+    let tokens = token::tokenize(&file_content);
+    println!("Tokens: {:?}", tokens);
+
     // TODO create abstract syntax tree
 }

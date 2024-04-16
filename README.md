@@ -2,7 +2,7 @@
 
 I've always wanted to create my own programming language, but I've never really had the energy to do so. I'm going to attempt to do so now though!
 
-## Syntax
+## Planned Syntax
 
 ```
 use models # Imports a module in the same directory
@@ -22,4 +22,14 @@ function NonEmptyFunction
 
 function Main
     # This is the entry point of your program
+	exit 0
+```
+
+## Current Syntax
+
+```
+exit 0
+
+exit\
+0
 ```
