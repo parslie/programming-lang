@@ -1,5 +1,6 @@
 use std::{env, fs::OpenOptions, io::Read, path::Path};
 
+mod ast;
 mod token;
 
 fn main() {
@@ -13,5 +14,6 @@ fn main() {
     let tokens = token::tokenize(&file_content);
     println!("Tokens: {:?}", tokens);
 
-    // TODO create abstract syntax tree
+    let ast = ast::construct_ast(tokens);
+    println!("AST: {:?}", ast);
 }

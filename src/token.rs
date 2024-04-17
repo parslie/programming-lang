@@ -1,6 +1,6 @@
 use std::str::Split;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum Token {
     Exit,
     IntLiteral(String),
