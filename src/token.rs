@@ -8,8 +8,6 @@ pub enum Token {
 }
 
 fn evaluate_buffer(buffer: &str) -> Token {
-    println!("Evaluating '{}'..", buffer);
-
     if buffer == "exit" {
         return Token::Exit;
     }
@@ -30,8 +28,6 @@ fn evaluate_buffer(buffer: &str) -> Token {
 }
 
 fn tokenize_line(line: &str, tokens: &mut Vec<Token>) {
-    println!("Tokenizing '{}'...", line);
-
     let mut chars = line.chars().peekable();
     let mut buffer = String::new();
 

@@ -56,8 +56,6 @@ fn parse_statement(statement: Vec<Token>) -> Node {
 }
 
 pub fn construct_ast(tokens: Vec<Token>) -> Vec<Node> {
-    println!("Constructing abstract syntax tree...");
-
     let mut ast = Vec::new();
 
     let statements = split_tokens(tokens);
